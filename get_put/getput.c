@@ -1,9 +1,13 @@
 #include <stdio.h>
 
 int main(void)
-{
-    int c;
+[
+    long nc;
 
-    while ((c = getchar()) != EOF)
-        putchar(c);
-}
+    nc = 0;
+    while (getchar() != EOF)
+        ++nc;
+    printf("%ld\n", nc);
+
+    return 0;
+]
