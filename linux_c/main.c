@@ -1,25 +1,26 @@
 #include <stdio.h>
 
-void newline(void)
+int is_leap_year(int year)
 {
-    printf("\n");
-}
-
-void threeline(void)
-{
-    newline();
-    newline();
-    newline();
+    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+        return 1;
+    } else {
+        return 0;
+    }
 }
 
 int main(void)
 {
-    printf("First line.\n");
-    //newline();
-    //newline();
-    //newline();
-    threeline();
-    printf("Next line.\n");
+    int year;
+    printf("请输入年份: ");
+    scanf("%d", &year);
+
+    if (is_leap_year(year)) {
+        printf("%d年是闰年。\n", year);
+    } else {
+        printf("%d年不是闰年。\n", year);
+    }
+
 
     return 0;
 }
